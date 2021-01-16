@@ -1,8 +1,9 @@
-package sonnicon.modtemplate;
+package humanera.core;
 
 import mindustry.mod.Mod;
+import humanera.content.*;
 
-public class ModTemplate extends Mod{
+public class Main extends Mod{
 
     @Override
     public void init(){
@@ -10,5 +11,6 @@ public class ModTemplate extends Mod{
 
     @Override
     public void loadContent(){
+        new ModLoader().load();
     }
 }

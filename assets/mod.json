@@ -1,11 +1,11 @@
 {
-  "name": "modtemplate",
-  "displayName": "Template",
-  "author": "[#8738ff[]]Sonnicon[[]]",
-  "description": "Gradle jar Mindustry mod template",
+  "name": "HumanEra",
+  "displayName": "Human Era Mod",
+  "author": "AshesKaiser",
+  "description": "Mindustry mod with realistic resources, units based on eras, stone age, bronze age, and more!",
   "version": "0",
   "main": "sonnicon.modtemplate.ModTemplate",
-  "minGameVersion": "105",
+  "minGameVersion": "122",
   "dependencies": [],
   "hidden": false
 }

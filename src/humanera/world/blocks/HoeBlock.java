@@ -26,7 +26,6 @@ public class HoeBlock extends Block{
         solid = true;
         hasItems = true;
         sync = true;
-        breakable = true;
         health = 40 * size * size;
     }
 

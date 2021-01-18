@@ -47,6 +47,6 @@ public class HEBlocks implements ContentList {
             flameColor = Color.valueOf("e25822");
             
             consumes.items(with(Items.copper, 3, HEItems.tin, 1));
-        });
+        }};
     }
 }

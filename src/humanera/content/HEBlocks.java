@@ -14,7 +14,7 @@ import mindustry.world.*;
 import static mindustry.type.ItemStack.with;
 
 public class HEBlocks implements ContentList {
-    public static Block rotaryHoe, woodBreaker;
+    public static Block rotaryHoe, woodBreaker, formWork;
 
     public void load(){
         rotaryHoe = new HoeBlock("rotary-hoe"){{

@@ -14,7 +14,16 @@ import mindustry.world.*;
 import static mindustry.type.ItemStack.with;
 
 public class HEBlocks implements ContentList {
-    public static Block rotaryHoe, woodBreaker, formWork;
+    public static Block 
+        
+    //HoeBlock
+    rotaryHoe, 
+    //HoeBreaker
+    woodBreaker, 
+    //production
+    formWork,
+    //units
+    hut;
 
     public void load(){
         rotaryHoe = new HoeBlock("rotary-hoe"){{
@@ -48,5 +57,16 @@ public class HEBlocks implements ContentList {
             
             consumes.items(with(Items.copper, 3, HEItems.tin, 1));
         }};
+        
+        hut = new UnitFactory("hut"){{
+            requirements(Category.units, with(Items.wood, 100, Items.stone, 30));
+            plans = Seq.with(
+                new UnitPlan(UnitTypes.stoneWorker, 60f * 15, with(Items.wood, 10, Items.stone, 10)),
+            );
+            hasPower = false;
+            rotate = false;
+            size = 2;
+        }};
+
     }
 }

@@ -21,9 +21,7 @@ public class HEBlocks implements ContentList {
     //HoeBreaker
     woodBreaker, 
     //production
-    formWork,
-    //units
-    hut;
+    formWork, steelForge;
 
     public void load(){
         rotaryHoe = new HoeBlock("rotary-hoe"){{
@@ -58,15 +56,20 @@ public class HEBlocks implements ContentList {
             consumes.items(with(Items.copper, 3, HEItems.tin, 1));
         }};
         
-        hut = new UnitFactory("hut"){{
-            requirements(Category.units, with(Items.wood, 100, Items.stone, 30));
-            plans = Seq.with(
-                new UnitPlan(UnitTypes.stoneWorker, 60f * 15, with(Items.wood, 10, Items.stone, 10)),
-            );
+        firepit = new GenericCrafter("Firepit"){{
+            requirements(Category.crafting, with(Items.wood, 50, Items.stone, 30));
+            
+            craftEffect = Fx.smeltsmoke;
+            outputItem = new ItemStack(Items.coal, 1);
+            size = 1;
+            craftTime = 75f;
             hasPower = false;
-            rotate = false;
-            size = 2;
+            hasItems = true;
+            hasLiquids = false;
+            
+            flameColor = Color.valueof("000000");
+            
+           consumes.items(with(HEItems.wood, 1));
         }};
-
     }
 }

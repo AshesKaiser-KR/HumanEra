@@ -4,6 +4,8 @@ plugins {
 
 group pGroup
 
+sourceCompatibility = 8
+
 sourceSets.main {
     java.srcDir("src/")
     resources.srcDir("assets/")
